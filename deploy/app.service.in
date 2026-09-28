@@ -8,7 +8,7 @@ After=network.target
 Type=simple
 User=@APP_NAME@
 Group=@APP_NAME@
-# Фронтенд сервер берёт из ../ХакатонLastVersion (или ../Hackaton) относительно этого каталога.
+# Фронтенд сервер берёт из ../frontend (или ../Hackaton) относительно этого каталога.
 WorkingDirectory=@APP_DIR@/current/backend
 # Слушаем только localhost: снаружи сайт отдаёт nginx (deploy/web.sh).
 Environment=HOST=127.0.0.1

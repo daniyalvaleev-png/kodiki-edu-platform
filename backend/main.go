@@ -8,7 +8,7 @@
 //	DB_PATH     — файл базы SQLite, по умолчанию data/kotiki.db
 //	UPLOAD_DIR  — куда сохранять файлы учеников, по умолчанию data/uploads
 //	STATIC_DIR  — папка фронтенда, которую сервер отдаёт по адресу /,
-//	              по умолчанию ../ХакатонLastVersion, а если её нет — ../Hackaton
+//	              по умолчанию ../frontend, а если её нет — ../Hackaton
 //	PYTHON_BIN  — чем запускать решения на Python, по умолчанию ищется python3 / python / py -3
 package main
 
@@ -54,7 +54,7 @@ func main() {
 	srv := &api.Server{
 		DB:        conn,
 		UploadDir: env("UPLOAD_DIR", "data/uploads"),
-		StaticDir: env("STATIC_DIR", firstDir("../ХакатонLastVersion", "../Hackaton")),
+		StaticDir: env("STATIC_DIR", firstDir("../frontend")),
 	}
 	addr := env("HOST", "") + ":" + env("PORT", "8080")
 	log.Printf("Сервер запущен: http://localhost:%s  (API: /api/health, адрес: %s, фронтенд: %s)", env("PORT", "8080"), addr, srv.StaticDir)

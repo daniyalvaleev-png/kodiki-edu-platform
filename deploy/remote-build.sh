@@ -47,7 +47,7 @@ fi
 sudo -n install -d -o "$APP_USER" -g "$APP_USER" -m 750 "$SHARED_DIR/data"
 
 # 5. Проверка релиза до переключения.
-[ -f ХакатонLastVersion/index.html ] || [ -f Hackaton/index.html ] || { echo "нет папки фронтенда"; exit 1; }
+[ -f frontend/index.html ] || [ -f Hackaton/index.html ] || { echo "нет папки фронтенда"; exit 1; }
 chmod 755 deploy/sandbox/python3
 deploy/sandbox/python3 -c 'print("песочница python3: ok")'
 bash -n deploy/remote-start.sh
