@@ -8,7 +8,7 @@
 //	DB_PATH     — файл базы SQLite, по умолчанию data/kotiki.db
 //	UPLOAD_DIR  — куда сохранять файлы учеников, по умолчанию data/uploads
 //	STATIC_DIR  — папка фронтенда, которую сервер отдаёт по адресу /,
-//	              по умолчанию ../frontend, а если её нет — ../Hackaton
+//	              по умолчанию ../frontend
 //	PYTHON_BIN  — чем запускать решения на Python, по умолчанию ищется python3 / python / py -3
 package main
 
